@@ -12,7 +12,7 @@ import { meRequest } from "./msalConfig";
 import { callMsGraph } from "./MsGraphApiCall";
 import { ErrorComponent } from "./ErrorComponent";
 import { Loading } from "./Loading";
-import { callToken } from "./MsGraphApiCall2";
+import { callToken } from "./CustomApiCall";
 
 const ProfileContent = () => {
   const { instance, inProgress } = useMsal();

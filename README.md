@@ -131,6 +131,47 @@ export async function callMsGraph() {
 }
 ```
 
+## Example API Call to Your Own API
+Create a function to make an API call to your own backend API.
+
+### `CustomApiCall.ts`
+```typescript
+import { tokenRequest } from "./msalConfig";
+import { msalInstance } from "./main";
+
+// Function to call your backend API
+export async function callToken() {
+  const account = msalInstance.getActiveAccount();
+  if (!account) {
+    throw Error(
+      "No active account! Verify a user has been signed in and setActiveAccount has been called."
+    );
+  }
+
+  // Acquire token silently
+  const response = await msalInstance.acquireTokenSilent({
+    ...tokenRequest,
+    account: account,
+    forceRefresh: false,
+  });
+
+  const headers = new Headers();
+  const bearer = `Bearer ${response.accessToken}`;
+  headers.append("Authorization", bearer);
+
+  const options = {
+    method: "GET",
+    headers: headers,
+  };
+
+  // API call to your backend
+  return fetch("http://localhost:8080/api/data", options)
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
+}
+
+
 ## React Components to Display User Profile
 Create a React component that uses MSAL to authenticate the user and display profile data.
 
