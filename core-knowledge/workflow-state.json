@@ -1,0 +1,45 @@
+{
+  "initialized": true,
+  "last_run": "2026-04-01T12:21:53Z",
+  "last_workflow": "Code Scan & Document",
+  "chapters": {
+    "01-overview": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["/"]
+    },
+    "02-architecture": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["src/"]
+    },
+    "03-authentication-system": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["src/main.tsx", "src/msalConfig.ts", "src/NavigationClient.ts"]
+    },
+    "04-api-layer": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["src/MsGraphApiCall.ts", "src/CustomApiCall.ts"]
+    },
+    "05-components": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["src/App.tsx", "src/Profile.tsx", "src/Home.tsx", "src/ErrorComponent.tsx", "src/Loading.tsx"]
+    },
+    "06-configuration": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["tsconfig.json", ".eslintrc.cjs", "vite.config.ts", "package.json"]
+    },
+    "07-build-tooling": {
+      "status": "complete",
+      "last_updated": "2026-04-01",
+      "source_paths": ["vite.config.ts", "package.json", "pnpm-lock.yaml"]
+    }
+  },
+  "user_data_processed": [],
+  "user_data_pending": [],
+  "pending_updates": []
+}
